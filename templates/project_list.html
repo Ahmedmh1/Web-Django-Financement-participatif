@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project List</title>
+</head>
+<body>
+    <h2>Project List</h2>
+    <table border="1">
+        <tr>
+            
+            <th scope="col">Name</th>
+            <th scope="col">Street Address</th>
+            <th scope="col">Country</th>
+            <th scope="col">Description</th>
+            <th scope="col">Image</th>
+        </tr>
+        {% for project in projects %}
+        <tr>
+            <td>{{ project.Nameproject }}</td>
+            <td>{{ project.Streetaddress }}</td>
+            <td>{{ project.country }}</td>
+            <td>{{ project.Description }}</td>
+            <td>
+                {% if project.image %}
+                <img src="{{ project.image.url }}" alt="Project Image" style="width:100px;height:auto;">
+                {% else %}
+                No Image
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+

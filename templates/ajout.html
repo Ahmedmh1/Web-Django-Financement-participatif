@@ -1,0 +1,90 @@
+{% load static %}
+=<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"></script>
+<head>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+=    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Add Project</title>
+  </head>
+
+<body>
+    <section
+    class="vh-100 bg-image"
+    style="
+      background-image: url('static/img/Add.png');"
+    
+    >
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+          <div
+            class="row d-flex justify-content-center align-items-center h-100"
+          >
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+              <div class="card" style="border-radius: 15px">
+                <div class="card-body p-5">
+                  <h2 class="text-uppercase text-center mb-5">
+                    Add Project
+                  </h2>
+    <div class="wrapper">
+        <form action="{% url 'add_project' %}" method="POST" >   
+          {% csrf_token %} 
+            <div class="form-outline mb-4">
+                <h4></h4>
+                <section> 
+                    <div class="form-outline mb-4">
+                        <input  type="text" id="form1Example1" class="form-control" name="Nameproject" required />
+                        <label class="form-label" for="form1Example1">Name of project</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input  type="text" id="form1Example1" class="form-control" name="Streetaddress" required />
+                        <label class="form-label" for="form1Example1">Street address</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input  type="text" id="form1Example1" class="form-control" name="country" required />
+                        <label class="form-label" for="form1Example1">country</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input  type="text" id="form1Example1" class="form-control" name="Description" required />
+                        <label class="form-label" for="form1Example1">Description</label>
+                    </div> 
+                    
+                </section> 
+                <h4></h4>
+                <section>
+                    <div class="form-outline mb-4">
+                        <input  type="text" id="form1Example1" class="form-control" name="Email" required />
+                        <label class="form-label" for="form1Example1">Email</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input  type="text" id="form1Example1" class="form-control" name="Phone Number" required />
+                        <label class="form-label" for="form1Example1">Phone Number</label>
+                    </div>                
+                </section> 
+                <h4></h4>
+                <section>
+                    <div class="form-row">
+                        <input type="file" class="form-control" placeholder="Upload a photo">
+                    </div>
+                </section>
+            </div>
+            <a href="{% url 'add_project' %}"> </a> <button type="submit" class="btn btn-primary btn-block">Add Project</button>
+        </form>
+    </div>
+</body>
+
+
+

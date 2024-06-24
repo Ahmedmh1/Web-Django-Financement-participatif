@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Financement Participatif</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="author" content="">
+        <meta name="keywords" content="">
+        <meta name="description" content="">    
+
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+        <link rel="stylesheet" href="static/css/style1.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    </head>
+
+    <body class="bg-white" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+        <!--svgs-->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <!--icons-->
+            <symbol id="circle" viewBox="0 0 24 24">
+                <path fill="#e16029" d="M16.03 10.03a.75.75 0 1 0-1.06-1.06l-4.47 4.47l-1.47-1.47a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0z"/>
+                <path fill="#e16029" fill-rule="evenodd" d="M12 1.25C6.063 1.25 1.25 6.063 1.25 12S6.063 22.75 12 22.75S22.75 17.937 22.75 12S17.937 1.25 12 1.25M2.75 12a9.25 9.25 0 1 1 18.5 0a9.25 9.25 0 0 1-18.5 0" clip-rule="evenodd"/>
+            </symbol>
+            <symbol xmlns="http://www.w3.org/2000/svg" id="star" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M394 480a16 16 0 0 1-9.39-3L256 383.76L127.39 477a16 16 0 0 1-24.55-18.08L153 310.35L23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480"/>
+            </symbol>
+        </svg>
+        <!--svgs-->
+
+        <header id="header" class="site-header">
+            <nav class="navbar navbar-expand-lg px-lg-5">
+              <div class="container-fluid py-3">
+                <a class="navbar-brand" href="#logo">
+                  <img src="static/img/logo1.png" alt="Logo">
+                </a>
+                <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarTogglerDemo02" 
+                aria-controls="navbarTogglerDemo02" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                  <ul class="navbar-nav gap-4 text-end mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active text-uppercase fw-medium" aria-current="page" href="#home">Acceil</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-uppercase fw-medium" aria-current="page" href="#about">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-uppercase fw-medium" aria-current="page" href="#features">Fonctionnalités</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-uppercase fw-medium" aria-current="page" href="#reviews">Projet</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-uppercase fw-medium" aria-current="page" href="#gallery">Équipe</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-uppercase fw-medium"  href="{% url 'sing_in' %}">Connecter</a>           
+                    </li>
+                  </ul>         
+                </div>
+              </div>
+            </nav>
+          </header>
+  
+          <section id="home" class="bg-primary-subtle section-padding pb-5 pb-md-0">
+              <div class="container">
+                <div class="row g-4 flex-row-reverse align-items-center">
+                  <div class="col-md-6 text-center">
+                      <img src="static/img/im2.png" class="img-fluid">
+                  </div>
+                  <div class="col-md-6">
+                    <h1 class="mb-4">
+                      Commencez votre projet vers une vie plus réussie dès aujourd'hui
+                    </h1>
+                    <div class="d-flex align-items-center icon mt-2">
+                      <svg class="circle" width="22" height="22">
+                          <use xlink:href="#circle"></use>
+                      </svg>
+                      <p class="px-2 mb-0 fw-medium">
+                        100% efficace pour le succès
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center icon mt-2">
+                      <svg class="circle" width="22" height="22">
+                          <use xlink:href="#circle"></use>
+                      </svg>
+                      <p class="px-2 mb-0 fw-medium">
+                        Ensemble vers le succès
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center icon mt-2">
+                      <svg class="circle" width="22" height="22">
+                          <use xlink:href="#circle"></use>
+                      </svg>
+                      <p class="px-2 mb-0 fw-medium">
+                        Communauté de soutien
+                      </p>
+                    </div>
+                    <a class="btn btn-primary btn-lg mt-5 btn-color" href="{% url 'sing_up'%}">                      Inscrivez-vous
+                    </a>                   
+                  </div>
+                </div>
+              </div>
+          </section>
+  
+          <section id="about" class="section-padding">
+              <div class="container">
+                 <div class="row align-items-center">
+                    <div class="col">
+                        <div >
+                           <img src="static/img/logo2.png" class="img-fluid"> 
+                        </div>
+                    </div>
+                    <div class="col text-start">
+                      <div>
+                          <h2 class="mb-4">
+                            Construisons ensemble l'avenir
+                          </h2>
+                          <p>
+                            Offrant une opportunité unique aux porteurs de projets de réaliser leurs rêves.
+                          </p>
+                          <p>
+                            Met en relation les porteurs de projets innovants avec une communauté d'investisseurs passionnés, permettant ainsi de concrétiser des idées prometteuses et de soutenir l'entrepreneuriat.                        </p>
+                      </div> 
+                    </div>
+                 </div>
+              </div>
+          </section>
+
+          <section id="features" class="bg-body-secondary py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                      <h2 class="mb-4">
+                        Les fonctionnalités de notre plateforme  </h2>
+                      <p>
+                        Notre plateforme de financement participatif offre une gamme de fonctionnalités conçues pour rendre votre expérience aussi fluide et efficace que possible:                      <ul class="ps-0">
+                        <li class="d-flex align-items-center icon mt-2">
+                            <svg class="circle" width="22" height="22">
+                                <use xlink:href="#circle"></use>
+                            </svg>
+                            <p class="px-2 mb-0 fw-medium">
+                              Création de projet: Créez facilement et rapidement une campagne de financement pour votre projet.</p>
+                        </li>
+                        <li class="d-flex align-items-center icon mt-2">
+                            <svg class="circle" width="22" height="22">
+                                <use xlink:href="#circle"></use>
+                            </svg>
+                            <p class="px-2 mb-0 fw-medium">
+                              Découverte de projets: Explorez une variété de projets intéressants dans différents domaines.</p>
+                        </li>
+                        <li class="d-flex align-items-center icon mt-2">
+                            <svg class="circle" width="22" height="22">
+                                <use xlink:href="#circle"></use>
+                            </svg>
+                            <p class="px-2 mb-0 fw-medium">
+                              Investir dans un projet: soutenez ceux qui vous passionnent en investissant dans leur réussite.
+                            </p>
+                        </li>
+                        <li class="d-flex align-items-center icon mt-2">
+                            <svg class="circle" width="22" height="22">
+                                <use xlink:href="#circle"></use>
+                            </svg>
+                            <p class="px-2 mb-0 fw-medium">
+                              Engagement de la communauté: Rejoignez une communauté engagée d'entrepreneurs, d'investisseurs                             </p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="static/img/img3.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-choose-us" class="section-padding">
+            <div class="container mt-5">
+                <div class="text-center">
+                  <h2>
+                    Pourquoi choisir notre plateforme?
+                  </h2>
+                </div>
+                <div class="row g-4 text-center py-4 mt-4">
+                    <div class="col-md-4">
+                      <img src="static/img/icon-1.png" class="img-fluid">
+                      <h4 class="mt-4">
+                        Transparence et Sécurité
+                      </h4>
+                      <p>
+                        Offrez un processus transparent où les contributeurs peuvent voir où va leur argent et comment il est utilisé.
+                      </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="static/img/icon-2.png" class="img-fluid">
+                        <h4 class="mt-4">
+                          Diversité des Projets
+                        </h4>
+                        <p>
+                          Proposez une variété de projets à soutenir, couvrant différents domaines tels que l'environnement, la santé, l'éducation, etc.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="static/img/icon-3.png" class="img-fluid">
+                        <h4 class="mt-4">
+                          Facilité d'Utilisation
+                        </h4>
+                        <p>
+                          Assurez-vous que la plateforme est conviviale et que le processus de contribution est simple et intuitif, ce qui incite les utilisateurs à participer davantage.
+                    </div>
+                    <div class="col-md-4">
+                      <img src="static/img/icon-4.png" class="img-fluid">
+                      <h4 class="mt-4">
+                        Impact Social et Environnemental
+                      </h4>
+                      <p>
+                        Mettez en avant les projets qui ont un impact positif sur la société ou l'environnement, ce qui peut encourager les gens à contribuer pour soutenir des causes qui leur tiennent à cœur.
+                      </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="static/img/icon-5.png" class="img-fluid">
+                        <h4 class="mt-4">
+                          Communauté Engagée
+                        </h4>
+                        <p>
+                          Créez une communauté dynamique autour de la plateforme, où les contributeurs peuvent interagir, partager des idées et se sentir connectés aux projets.                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="static/img/icon-6.png" class="img-fluid">
+                        <h4 class="mt-4">
+                          Flexibilité des Contributions
+                        </h4>
+                        <p>
+                          Offrez aux contributeurs la possibilité de choisir le montant de leur contribution et le projet dans lequel ils souhaitent investir.                        </p>
+                    </div>
+                </div>        
+            </div>
+        </section>
+        <section id="reviews" class="bg-body-secondary section-padding">
+            <div class="container">
+                <div class="text-center mb-5">
+                  <h2>
+                      Projet
+                  </h2>
+                </div>
+                <div class="swiper testimonial-swiper">
+                  <div class="swiper-wrapper">
+                      <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
+                        <div class="text-center">
+                          <h4>
+                        Café A ENNASER 
+                          </h4>
+                          <h6 class="mb-3">
+                            +216 71 234 567
+                          </h6>
+                          <p class="fs-5">
+                            <p class="fs-5">
+                               notre café chaleureux et accueillant, où vous pourrez déguster des boissons savoureuses et vous détendre dans une ambiance conviviale.
+                            </p>
+                          </p>
+                          <div class="gallery-image py-2 px-1 swiper-slide"><img src="static/img/cafe.jpg" class="img-fluid rounded-3"></div>
+                          <a class="btn btn-primary btn-lg mt-5 btn-color" href="{% url 'sing_up'%}">                      Inscrivez-vous
+                          </a>
+                          
+                        </div>    
+                      </div>
+                      <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
+                        <div class="text-center">
+                          <h4>
+                            Salle de sport à Korba
+                          </h4>
+                          <h6 class="mb-3">
+                            +216 55 666 444
+                          </h6>
+                          <p class="fs-5">
+                            <p class="fs-5">
+                              Découvrez une salle de sport moderne et équipée avec des installations de pointe, des entraîneurs expérimentés et une atmosphère motivante pour les amateurs de fitness et les investisseurs passionnés par le bien-être et la santé.
+                            </p>
+                          </p>
+                          <div class="gallery-image py-2 px-1 swiper-slide"><img src="static/img/salle.jpg" class="img-fluid rounded-3"></div>
+                          <button type="button" class="btn btn-primary btn-lg mt-3 btn-color" href="{% url 'sing_up'%}">
+                            Inscrivez-vous
+                           </button>
+                        </div>    
+                      </div>        
+                      <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
+                        <div class="text-center">
+                          <h4>
+                            Restaurant à Tunis
+                          </h4>
+                          <h6 class="mb-3">
+                            +216 21 666 555
+                          </h6>
+                          <p class="fs-5">
+                            Passionnés de la gastronomie en investissant dans notre restaurant à Tunis. Découvrez une expérience culinaire unique, avec des plats savoureux préparés par des chefs talentueux et une ambiance chaleureuse qui ravira les clients. Soyez partie prenante de notre succès et contribuez à créer un lieu incontournable pour les amateurs de bonne cuisine.
+                          </p>
+                          <div class="gallery-image py-2 px-1 swiper-slide"><img src="static/img/resto.jpg" class="img-fluid rounded-3"></div>
+                          <a class="btn btn-primary btn-lg mt-5 btn-color" href="{% url 'sing_up'%}">                      Inscrivez-vous
+                          </a> 
+                        </div>    
+                      </div>   
+                      
+                      <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
+                        <div class="text-center">
+                          <h4>
+                            cafe à Tunis
+                          </h4>
+                          <h6 class="mb-3">
+                            +216 21 2222 555
+                          </h6>
+                          <p class="fs-5">
+                            Passionnés de la gastronomie en investissant dans notre restaurant à Tunis. Découvrez une expérience culinaire unique, avec des plats savoureux préparés par des chefs talentueux et une ambiance chaleureuse qui ravira les clients. Soyez partie prenante de notre succès et contribuez à créer un lieu incontournable pour les amateurs de bonne cuisine.
+                          </p>
+                          <div class="gallery-image py-2 px-1 swiper-slide"><img src="static/img/cafe.jpg" class="img-fluid rounded-3"></div>
+                          <a class="btn btn-primary btn-lg mt-5 btn-color" href="{% url 'sing_up'%}">                      Inscrivez-vous
+                          </a> 
+                        </div>    
+                      </div> 
+                      
+                      <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
+                        <div class="text-center">
+                          <h4>
+                            Localisation de voiture à Tunis
+                          </h4>
+                          <h6 class="mb-3">
+                            +216 21 666 555
+                          </h6>
+                          <p class="fs-5">
+                            <p class="fs-5">
+                              Découvrez une opportunité d'investissement passionnante dans notre service de location de voitures à Tunis. Profitez d'un marché en croissance constante et d'une demande croissante pour les services de location de voitures. Soyez partie prenante de notre succès et contribuez à offrir une expérience de conduite exceptionnelle à nos clients.
+                            </p>
+                          </p>
+                          <div class="gallery-image py-2 px-1 swiper-slide"><img src="static/img/loca.jpeg" class="img-fluid rounded-3"></div>
+                          <a class="btn btn-primary btn-lg mt-5 btn-color" href="{% url 'sing_up'%}">                      Inscrivez-vous
+                          </a> 
+                        </div>    
+                      </div> 
+
+                </div>
+                <div class="testimonial-swiper-pagination position-relative mt-5 text-center"></div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section-padding">
+          <div class="container">
+              <div class="text-center mb-5">
+              <h2>
+                Notre équipe
+              </h2>
+              </div>
+              <div   class="swiper gallery-swiper" > 
+                <div class="swiper-wrapper">
+                  <div class="gallery-image py-2 px-1 swiper-slide">
+                    <h3 class="text-center">Omar BELGHITH</h3>
+                    <img src="static/img/omar.png" class="img-fluid rounded-3">
+                  </div>
+                    <div class="gallery-image py-2 px-1 swiper-slide">
+                      <h3 class="text-center">Ahmed MAHMOUD</h3>
+                      <img src="static/img/ahmed.jpg" class="img-fluid rounded-3">
+                    </div>
+                    <div class="gallery-image py-2 px-1 swiper-slide">
+                      <h3 class="text-center"> Med Amine CHEBBI</h3>
+                      <img src="static/img/amine.png" class="img-fluid rounded-3">
+                    </div>
+                </div>
+              </div>
+              <div class="gallery-swiper-pagination position-relative mt-5 text-center"></div>
+          </div>
+        </section>
+
+        <footer id="footer" class="section-padding bg-primary-subtle">
+          <div class="container align-items-center">
+            <div class="row">
+              <div class="col-md-6 offset-md-3 text-center">
+                <h2 class="mb-3">
+                  Prêt à faire le premier pas vers une vie pleine de succès ?
+                </h2>
+                <p>
+                  Ensemble, nous pouvons construire un avenir meilleur. Rejoignez notre plateforme participative et contribuez à façonner le monde de demain dès aujourd'hui.                </p>
+                  <a class="btn btn-primary btn-lg mt-5 btn-color" href="{% url 'sing_up'%}">                      Inscrivez-vous
+                  </a> 
+              </div>
+            </div>
+        </div>
+        </footer>
+        <script src="static/js/jquery-1.11.0.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script type="text/javascript" src="static/js/script.js"></script>
+    </body>
+</html>
